@@ -27,8 +27,13 @@ prefix가 싫으시면 폴더로 구분해도 돼요!
 
 ## etc
 
-참고 스터디 : https://github.com/TheCopiens/algorithm-study
+참고 스터디1 : https://github.com/TheCopiens/algorithm-study
 
+참고 스터디2 : https://github.com/lenon461/algorithm-study
 다른 사람들이 진행한 스터디 자료입니다.
 
 구경해보세요!
+
+한글로 된 글을 올리고 싶을 때는 .md(markdown)파일로 작성해주세요!
+
+마크다운 사용법 : https://gist.github.com/ihoneymon/652be052a0727ad59601
