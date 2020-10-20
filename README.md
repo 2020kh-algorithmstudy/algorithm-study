@@ -9,6 +9,9 @@ algorithm-study with java
 
 오른쪽 상단에 add file - upload를 누르시면 파일을 업로드합니다.
 
+파일 작성시에 폴더 만들기 : 폴더명/파일명
+ex) sample/sample.txt
+
 
 ## upload rules
 
