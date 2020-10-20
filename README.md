@@ -1,6 +1,8 @@
 # algorithm-study
 algorithm-study with java
 
+_목표 : 알고리즘 개념 익히기
+
 ## description
 
 알고리즘 학습을 위한 공간입니다.
@@ -13,7 +15,7 @@ algorithm-study with java
 ex) sample/sample.txt
 
 
-## upload rules
+## uploading rules
 
 주차별로 폴더 안에 파일을 업로드 해주세요.
 
