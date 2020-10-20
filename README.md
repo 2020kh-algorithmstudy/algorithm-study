@@ -18,3 +18,11 @@ algorithm-study with java
 
 저는 jay로 해서 jay_q1.java와 같은 방식으로 하겠습니다.
 
+
+## etc
+
+참고 스터디 : https://github.com/TheCopiens/algorithm-study
+
+다른 사람들이 진행한 스터디 자료입니다.
+
+구경해보세요!
