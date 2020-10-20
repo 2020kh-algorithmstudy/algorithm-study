@@ -21,6 +21,8 @@ ex) sample/sample.txt
 
 저는 jay로 해서 jay_q1.java와 같은 방식으로 하겠습니다.
 
+prefix가 싫으시면 폴더로 구분해도 돼요!
+
 
 ## etc
 
