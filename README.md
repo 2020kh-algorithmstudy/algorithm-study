@@ -25,7 +25,7 @@ ex) sample/sample.txt
 * MAZIC : 혜준
 * jay : 선애
 * ?? : 희두
-* ?? : 
+* ?? : 문영
 
 ## etc
 
