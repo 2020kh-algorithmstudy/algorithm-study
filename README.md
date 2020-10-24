@@ -22,6 +22,11 @@ ex) sample/sample.txt
 
 단, 연습문제풀이 올릴 때 해답을 그대로 옮긴 거는 안됩니다.
 
+* MAZIC : 혜준
+* jay : 선애
+* ?? : 희두
+* ?? : 
+
 ## etc
 
 참고 스터디1 : https://github.com/TheCopiens/algorithm-study
