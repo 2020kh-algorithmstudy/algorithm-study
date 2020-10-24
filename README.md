@@ -46,6 +46,8 @@ Add files via upload 텍스트를 누르면 가장 최근 업로드한 커밋을
 
 커밋은 파일단위가 아니라서 일단은 자기가 올리고 싶을 때 커밋하시면 됩니다.
 
+좋은 자료 첨부 : https://nolboo.kim/blog/2013/10/06/github-for-beginner/
+
 =================
 
 자 다시 설명할게요!
