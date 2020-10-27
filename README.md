@@ -25,7 +25,7 @@ ex) sample/sample.txt
 * MAZIC : 혜준
 * jay : 선애
 * ?? : 희두
-* ?? : 문영
+* myB : 문영
 
 ## comments on commit
 디렉토리를 보시면 폴더 옆에 영문이 써있을 거예요!
