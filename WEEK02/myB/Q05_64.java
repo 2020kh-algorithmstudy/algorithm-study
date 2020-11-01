@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class Q05_64 {
 	
-	static void swap(int[] a, int idx1, int idx2) {
-		int t = a[idx1]; a[idx1] = a[idx2]; a[idx2] = t;
-	}
-	
 	static void reverse(int[] a) {
 		for(int i = 0; i < a.length/2; i++) {
-			swap(a, i, a.length - i - 1);
+			int t = a[i];
+			a[i] = a[a.length-i-1];
+			a[a.length-i-1] = t;
 		}		
 	}
 	
@@ -19,7 +17,7 @@ public class Q05_64 {
 		
 		reverse(a);
 		
-		System.out.println("¹è¿­ a : ");
+		System.out.println("ë°°ì—´ a : ");
 		for(int i = 0; i < a.length; i++) {				
 			System.out.print(a[i] + " ");
 		}
@@ -28,7 +26,7 @@ public class Q05_64 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¹è¿­ bÀÇ ±æÀÌ´Â? : ");
+		System.out.print("ë°°ì—´ bì˜ ê¸¸ì´ëŠ”? : ");
 		int num = sc.nextInt();
 		
 		int[] b = new int[num];
@@ -38,10 +36,10 @@ public class Q05_64 {
 			b[i] = sc.nextInt(); 
 		}
 		
-		System.out.println("¹è¿­ b¿¡ ¹è¿­ a¸¦ º¹»ç");
+		System.out.println("ë°°ì—´ bì— ë°°ì—´ aë¥¼ ë³µì‚¬");
 		int[] a = new int[num];
 		
-		System.out.println("¹è¿­ b : ");
+		System.out.println("ë°°ì—´ b : ");
 		for(int i = 0; i < b.length; i++) {
 			System.out.print(b[i] + " ");
 		}		
