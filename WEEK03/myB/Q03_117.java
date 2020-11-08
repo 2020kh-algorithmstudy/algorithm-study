@@ -9,8 +9,7 @@ public class Q03_117 {
 		
 		// 배열 a의 요소 중 key 값 찾기
 		for(int i = 0; i < n; i++) {
-			if(a[i] == key) {
-				
+			if(a[i] == key) {				
 				// i는 배열  a의 인덱스
 				// 배열 a의 몇 번 인덱스에 key 값이 있는지, 해당 인덱스 값을 저장하는 배열 y
 				y[cnt++] = i; 
