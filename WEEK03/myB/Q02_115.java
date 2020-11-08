@@ -38,7 +38,7 @@ public class Q02_115 {
 		for (i = 0; a[i] != key; i++) { 
 			System.out.printf("  |");
 			for (k = 0; k <= i; k++) {
-				System.out.print("   "); // 3칸 띄우고
+				System.out.print("   "); // 3칸씩 띄우고 띄우고
 			}
 			System.out.println("*"); // * 출력
 			
