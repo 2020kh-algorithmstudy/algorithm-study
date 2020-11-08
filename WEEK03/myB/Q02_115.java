@@ -2,29 +2,31 @@ package com.algorithm.ch03;
 
 import java.util.Scanner;
 
+// í•´ë‹µì´ ë” ë³µìž¡í•´ì„œ ì˜¬ë¦¬ì‹  ì½”ë“œë¥¼ í•˜ë‚˜ì”© ì„¤ëª…í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ê³µë¶€í–ˆì–´ìš”...!
+// ì½”ë“œ ê°ì‚¬ë“œë ¤ìš”!
 public class Q02_115 {
 
-	// ¹è¿­ aÀÇ ¾Õ ºÎºÐ n°³ÀÇ ¿ä¼Ò¿¡¼­ key¿Í °°Àº ¿ä¼Ò¸¦ ¼±Çü °Ë»ö_º¸ÃÊ¹ý
+	// ë°°ì—´ aì˜ ì•ž ë¶€ë¶„ nê°œì˜ ìš”ì†Œì—ì„œ keyì™€ ê°™ì€ ìš”ì†Œë¥¼ ì„ í˜• ê²€ìƒ‰_ë³´ì´ˆë²•
 	static int seqSearchSen(int[] a, int n, int key) {
 		
-		// for¹® 4°³ ÇÊ¿äÇÏ¹Ç·Î º¯¼ö 4°³ ÇÊ¿ä
-		int i = 0; // ¹è¿­ aÀÇ ÀÎµ¦½º ¿ëµµ
-		int j = 0; // ¹è¿­ aÀÇ °ª Ãâ·Â ¿ëµµ
-		int k = 0; // *ÀÇ °ø°£ ¼³Á¤ ¿ëµµ  
-		int l = 0; // Ã³À½ Ç¥ Çü½Ä ¼³°è ¿ëµµ
+		// forë¬¸ 4ê°œ í•„ìš”í•˜ë¯€ë¡œ ë³€ìˆ˜ 4ê°œ í•„ìš”
+		int i = 0; // ë°°ì—´ aì˜ ì¸ë±ìŠ¤ ìš©ë„
+		int j = 0; // ë°°ì—´ aì˜ ê°’ ì¶œë ¥ ìš©ë„
+		int k = 0; // *ì˜ ê³µê°„ ì„¤ì • ìš©ë„  
+		int l = 0; // ì²˜ìŒ í‘œ í˜•ì‹ ì„¤ê³„ ìš©ë„
 		
-		// ¹è¿­ÀÇ ¸¶Áö¸·¿¡ º¸ÃÊ Ãß°¡
+		// ë°°ì—´ì˜ ë§ˆì§€ë§‰ì— ë³´ì´ˆ ì¶”ê°€
 		a[n] = key;
 
-		// Ç¥ Çü½Ä ¼³°è 
-		System.out.printf("  | ");				
+		// í‘œ í˜•ì‹ ì„¤ê³„ 
+		System.out.print("  | ");				
 		for (l = 0; l < n; l++) {
 			System.out.printf("%3d", l);
-		} // ¹è¿­ ÀÎµ¦½º Ãâ·Â
+		} // ë°°ì—´ ì¸ë±ìŠ¤ ì¶œë ¥
 		
-		System.out.println(); // ÁÙ°³Çà
+		System.out.println(); // ì¤„ê°œí–‰
 		
-		// ¼± ±ß±â
+		// ì„  ê¸‹ê¸°
 		System.out.print("--+");
 		for (l = 0; l < n; l++) {
 			System.out.printf("----");
@@ -32,26 +34,26 @@ public class Q02_115 {
 		
 		System.out.println();
 		
-		// a[i] °ªÀÌ key °ªÀÌ ¾Æ´Ò ¶§ ½ÇÇà 
+		// a[i] ê°’ì´ key ê°’ì´ ì•„ë‹ ë•Œ ì‹¤í–‰ 
 		for (i = 0; a[i] != key; i++) { 
 			System.out.printf("  |");
 			for (k = 0; k <= i; k++) {
-				System.out.print("   "); // 3Ä­ ¶ç¿ì°í
+				System.out.print("   "); // 3ì¹¸ ë„ìš°ê³ 
 			}
-			System.out.println("*"); // * Ãâ·Â
+			System.out.println("*"); // * ì¶œë ¥
 			
-			// ÇöÀç ÀÎµ¦½º ¹øÈ£ Ãâ·Â
+			// í˜„ìž¬ ì¸ë±ìŠ¤ ë²ˆí˜¸ ì¶œë ¥
 			System.out.printf("%2d| ", i);
 			
-			// ÀÔ·Â ¹ÞÀº ÀüÃ¼ ¹è¿­ ¿ä¼Ò Ãâ·Â
+			// ìž…ë ¥ ë°›ì€ ì „ì²´ ë°°ì—´ ìš”ì†Œ ì¶œë ¥
 			for (j = 0; j < n; j++) {
 				System.out.printf("%3d", a[j]);
 			} 
 			System.out.println();
 		}
 		
-		// a[i] °ªÀÌ key °ªÀÏ ¶§ ½ÇÇà
-		System.out.printf("  |");
+		// a[i] ê°’ì´ key ê°’ì¼ ë•Œ ì‹¤í–‰
+		System.out.print("  |");
 		for (k = 0; k <= i; k++) {
 			System.out.print("   ");
 		}
@@ -62,31 +64,31 @@ public class Q02_115 {
 		}
 		System.out.println();
 
-		return i == n ? -1 : i; // key °ª Ã£¾ÒÀ¸¸é ÇØ´ç °ªÀÎ i, ¸ø Ã£¾ÒÀ¸¸é -1 return
+		return i == n ? -1 : i; // key ê°’ ì°¾ì•˜ìœ¼ë©´ í•´ë‹¹ ê°’ì¸ i, ëª» ì°¾ì•˜ìœ¼ë©´ -1 return
 	}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("ÆÄ¶ó¹ÌÅÍ °³¼ö : ");
+		System.out.print("íŒŒë¼ë¯¸í„° ê°œìˆ˜ : ");
 		int num = sc.nextInt();
 
-		int[] x = new int[num + 1]; // ÆÄ¶ó¹ÌÅÍ ¼ö num + 1
+		int[] x = new int[num + 1]; // íŒŒë¼ë¯¸í„° ìˆ˜ num + 1
 
 		for (int i = 0; i < num; i++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = sc.nextInt();
 		}
 
-		System.out.print("°Ë»öÇÒ °ª : "); // Å° °ª ÀÔ·Â
+		System.out.print("ê²€ìƒ‰í•  ê°’ : "); // í‚¤ ê°’ ìž…ë ¥
 		int ky = sc.nextInt();
 
-		int idx = seqSearchSen(x, num, ky); // ¹è¿­ x¿¡¼­ °ªÀÌ kyÀÎ ¿ä¼Ò °Ë»ö
+		int idx = seqSearchSen(x, num, ky); // ë°°ì—´ xì—ì„œ ê°’ì´ kyì¸ ìš”ì†Œ ê²€ìƒ‰
 
 		if (idx == -1) {
-			System.out.println(ky + " °ªÀ» °¡Áø ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println(ky + " ê°’ì„ ê°€ì§„ ìš”ì†Œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println(ky + "Àº(´Â) x[" + idx + "]¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(ky + "ì€(ëŠ”) x[" + idx + "]ì— ìžˆìŠµë‹ˆë‹¤.");
 		}
 	}
 }
