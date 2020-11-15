@@ -6,45 +6,45 @@ public class Q01_144 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		InStack s = new InStack(64); // ÃÖ´ë 64°³¸¦ Çª½ÃÇÒ ¼ö ÀÖ´Â ½ºÅÃ
+		InStack s = new InStack(64); // ìµœëŒ€ 64ê°œë¥¼ í‘¸ì‹œí•  ìˆ˜ ìˆëŠ” ìŠ¤íƒ
 		
 		while(true) {
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ ¼ö :" + s.size() + " / " + s.capacity());
-			System.out.println("1. Çª½Ã	2. ÆË	3. ÇÇÅ©	4. ´ıÇÁ	5. ÀÎµ¦½º Ã£±â"
-							+"  6. ½ºÅÃ ºñ¾îÀÖ´ÂÁö È®ÀÎ  7. ½ºÅÃ ²Ë Â÷ ÀÖ´ÂÁö  8. ½ºÅÃ Áö¿ì±â  0. Á¾·á");
-			System.out.print("¼±ÅÃ : ");
+			System.out.println("í˜„ì¬ ë°ì´í„° ìˆ˜ :" + s.size() + " / " + s.capacity());
+			System.out.println("1. í‘¸ì‹œ	2. íŒ	3. í”¼í¬	4. ë¤í”„  5. ìŠ¤íƒ ìš©ëŸ‰  6. ìŠ¤íƒ ë°ì´í„° ìˆ˜  7. ì¸ë±ìŠ¤ ì°¾ê¸°"
+							+"  8. ìŠ¤íƒ ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸  9. ìŠ¤íƒ ê½‰ ì°¨ ìˆëŠ”ì§€  10. ìŠ¤íƒ ì§€ìš°ê¸°  0. ì¢…ë£Œ");
+			System.out.print("ì„ íƒ : ");
 			
-			int menu = sc.nextInt(); 	// ¸Ş´º °í¸£±â
-			if(menu == 0) break; 		// 0¹ø ´©¸£¸é Á¾·á
+			int menu = sc.nextInt(); 	// ë©”ë‰´ ê³ ë¥´ê¸°
+			if(menu == 0) break; 		// 0ë²ˆ ëˆ„ë¥´ë©´ ì¢…ë£Œ
 			
 			int x;
 			switch(menu) {
 			case 1: // push
-				System.out.print("µ¥ÀÌÅÍ : ");
+				System.out.print("ë°ì´í„° : ");
 				x = sc.nextInt();
 				
 				try {
 					s.push(x);
 				} catch (InStack.OverflowInStackException e) {
-					System.out.println("½ºÅÃÀÌ °¡µæ Ã¡½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
 			case 2: // pop
 				try {
 					x = s.pop();
-					System.out.println("ÆËÇÑ µ¥ÀÌÅÍ´Â "+x+"ÀÔ´Ï´Ù.");
+					System.out.println("íŒí•œ ë°ì´í„°ëŠ” "+x+"ì…ë‹ˆë‹¤.");
 				} catch (InStack.EmptyInStackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
 			case 3 : // peek
 				try {
 					x = s.peek();
-					System.out.println("ÇÇÅ©ÇÑ µ¥ÀÌÅÍ´Â "+x+"ÀÔ´Ï´Ù.");
+					System.out.println("í”¼í¬í•œ ë°ì´í„°ëŠ” "+x+"ì…ë‹ˆë‹¤.");
 				} catch(InStack.EmptyInStackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
@@ -54,38 +54,46 @@ public class Q01_144 {
 			
 			case 5 : // indexOf
 				try {
-					System.out.print("Ã£°í½ÍÀº µ¥ÀÌÅÍ ÀÔ·Â : ");
+					System.out.print("ì°¾ê³ ì‹¶ì€ ë°ì´í„° ì…ë ¥ : ");
 					x = sc.nextInt();
 					int idx = s.indexOf(x);
 					if(idx == -1) {
-						System.out.println("ÇØ´ç ÀÎµ¦½º´Â Á¸ÀçÇÏÁö¾Ê½À´Ï´Ù.");
+						System.out.println("í•´ë‹¹ ì¸ë±ìŠ¤ëŠ” ì¡´ì¬í•˜ì§€ì•ŠìŠµë‹ˆë‹¤.");
 					} else {
-						System.out.println("ÇØ´ç µ¥ÀÌÅÍÀÇ ÀÎµ¦½º ¹øÈ£´Â "+idx+"ÀÔ´Ï´Ù.");
+						System.out.println("í•´ë‹¹ ë°ì´í„°ì˜ ì¸ë±ìŠ¤ ë²ˆí˜¸ëŠ” "+idx+"ì…ë‹ˆë‹¤.");
 					}					
 				} catch(InStack.EmptyInStackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
-			case 6 : // isEmpty
+			case 6 : // capacity
+				int capacity = s.capacity();
+				System.out.println("ìŠ¤íƒì˜ ìš©ëŸ‰ì€ "+capacity+"ì…ë‹ˆë‹¤.");
+				break;
+			case 7 : // size
+				int size = s.size();
+				System.out.println("ìŠ¤íƒì˜ ë°ì´í„° ìˆ˜ëŠ” "+size+"ê°œì…ë‹ˆë‹¤.");
+				break;
+			case 8 : // isEmpty
 				boolean result = s.isEmpty();
 				if(result == true) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖÁö ¾Ê½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
-			case 7 : // isFull
+			case 9 : // isFull
 				result = s.isFull();
 				if(result == true) {
-					System.out.println("½ºÅÃÀÌ ²Ë Ã¡½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("½ºÅÃÀÌ ²Ë Â÷Áö¾Ê¾Ò½À´Ï´Ù.");
+					System.out.println("ìŠ¤íƒì´ ê½‰ ì°¨ì§€ì•Šì•˜ìŠµë‹ˆë‹¤.");
 				}
 				break;
 				
-			case 8 : // clear
+			case 10 : // clear
 				s.clear();
 				break;
 			}
