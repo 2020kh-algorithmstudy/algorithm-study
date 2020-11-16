@@ -27,6 +27,9 @@ ex) sample/sample.txt
 * kimheedu : 희두
 * myB : 문영
 
+## java.time package 참고자료
+https://sleepyeyes.tistory.com/30
+
 ## comments on commit
 디렉토리를 보시면 폴더 옆에 영문이 써있을 거예요!
 
