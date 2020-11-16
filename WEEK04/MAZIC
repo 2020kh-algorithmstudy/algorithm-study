@@ -1,0 +1,103 @@
+package chap04;
+
+import java.util.Scanner;
+
+public class Practice01 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		IntStack s=new IntStack(64);
+		
+		while(true) {
+			System.out.println("���� ������ �� : "+s.size()+" / "+s.capacity());
+			System.out.print("1.Ǫ�� 2.�� 3.��ũ 4.���� 5.Ŭ���� 6.ĳ�ۼ�Ƽ 7.������ 8.��Ƽ 9.Ǯ 0.���� : ");
+			
+			int menu=sc.nextInt();
+			if(menu==0) {
+				break;
+			}
+			
+			int x;
+			switch(menu) {
+			case 1:{
+				System.out.print("������ : ");
+				x=sc.nextInt();
+				try {
+					s.push(x);
+				} catch (IntStack.OverflowIntStackException e) {
+					System.out.println("������ ���� á���ϴ�!");
+				}
+				break;
+			}
+			case 2:{
+				try {
+					x=s.pop();
+					System.out.println("�� �� �����ʹ� "+x+" �Դϴ�!");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 3:{
+				try {
+					x=s.peek();
+					System.out.println("��ũ�� �����ʹ� "+x+" �Դϴ�!");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 4:{
+				s.dump();
+				break;
+			}
+			case 5:{
+				try {
+					s.clear();
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 6:{
+				try {
+					System.out.println("������ ��ü �뷮�� "+s.capacity()+" �Դϴ�!");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 7:{
+				try {
+					System.out.println("���� ���� ������ ���� "+s.size()+" �Դϴ�!");
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 8:{
+				try {
+					if(!(s.isEmpty())) {
+						System.out.println("������ ��� ���� �ʽ��ϴ�!");
+					}
+				} catch (IntStack.EmptyIntStackException e) {
+					System.out.println("������ ��� �ֽ��ϴ�!");
+				}
+				break;
+			}
+			case 9:{
+				try {
+					if(!(s.isFull())) {
+						System.out.println("������ ���� �� ���� �ʽ��ϴ�!");
+					}
+				} catch (IntStack.OverflowIntStackException e) {
+					System.out.println("������ ���� á���ϴ�!");
+				}
+				break;
+			}
+			}
+		}
+	}
+
+}
